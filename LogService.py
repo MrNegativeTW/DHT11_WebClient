@@ -11,8 +11,13 @@ async def getValueThenStoreToDatabase():
 
     while True:
         # Get sensor value
-        temperature_c = dhtDevice.temperature
-        humidity = dhtDevice.humidity
+        try:
+            temperature_c = dhtDevice.temperature
+            humidity = dhtDevice.humidity
+        except RuntimeError as error:
+            print(error.args[0]) # A full buffer was not returned. Try again.
+            temperature_c = -999
+            humidity = -999
 
         try:
             # Connect to the database
