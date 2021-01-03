@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block Content %}
+
+<!-- <div class="WidgetContainer">
+    <div class="Widget TransferBox" style="top: 212px;transition: top 0.2s ease-in-out 0s;">
+        <div class="Send">
+            <span class="title3">Send</span>
+            <hr>
+            <span class="title3">Receive</span>
+        </div>
+
+    </div>
+</div> -->
+
+<div class="header-nightsky">
+
+    <nav class="navbar navbar-light" style="background: transparent;">
+        <a class="navbar-brand" href="#" style="color: #ffffff">
+            <img src="{{url_for('static', filename='image/navIcon.png')}}" width="30" height="30" alt="">
+            植物溫濕度觀測站
+        </a>
+        <a target="_blank" href="./history" class="btn btn-outline-light form-inline">
+            <i class="fab fa-github"> 歷史紀錄</i>
+        </a>
+    </nav>
+
+    <div class="hero">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm formBorder formPadding">
+                    <span class="textLeft mdc-typography-styles-headline6">9999</span><br>
+                    <span class="textLeft mdc-typography-styles-body2">土壤濕度</span>
+
+                    <hr>
+
+                    <span class="textLeft mdc-typography-styles-headline6">{{ temp }}</span><br>
+                    <span class="textLeft mdc-typography-styles-body2">目前溫度</span>
+
+                    <hr>
+
+                    <span class="textLeft mdc-typography-styles-headline6">{{ humidity }}</span><br>
+                    <span class="textLeft mdc-typography-styles-body2">環境溼度</span>
+
+                </div> <!-- ./col-sm -->
+
+            </div> <!-- ./row -->
+        </div> <!-- ./container -->
+    </div>
+</div>
+{% endblock Content %}

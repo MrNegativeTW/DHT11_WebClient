@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block Content %}
+
+<!-- <div class="WidgetContainer">
+    <div class="Widget TransferBox" style="top: 212px;transition: top 0.2s ease-in-out 0s;">
+        <div class="Send">
+            <span class="title3">Send</span>
+            <hr>
+            <span class="title3">Receive</span>
+        </div>
+
+    </div>
+</div> -->
+
+<div class="header-nightsky">
+
+    <nav class="navbar navbar-light" style="background: transparent;">
+        <a class="navbar-brand" href="../" style="color: #ffffff">
+            <img src="{{url_for('static', filename='image/navIcon.png')}}" width="30" height="30" alt="">
+            歷史紀錄
+        </a>
+    </nav>
+
+    <div class="hero">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm formBorder formPadding" style="width: 600px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">時間</th>
+                                <th scope="col">土壤濕度</th>
+                                <th scope="col">環境溫度</th>
+                                <th scope="col">環境濕度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in result %}
+                            <tr>
+                                <th>{{ i['time'] }}</th>
+                                <td>{{ i['dirtHum'] }}</td>
+                                <td>{{ i['temp'] }}</td>
+                                <td>{{ i['hum'] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    
+
+                </div> <!-- ./col-sm -->
+
+            </div> <!-- ./row -->
+        </div> <!-- ./container -->
+    </div>
+</div>
+{% endblock Content %}
