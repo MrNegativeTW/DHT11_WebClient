@@ -46,14 +46,21 @@
 
 6. Create TABLE
    ```
+   // Switch to database
+   use dht22;
+
+   // Create table
    CREATE TABLE `history` (
    `id` INT NOT NULL AUTO_INCREMENT,
-   `time` DATETIME NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
+   `time` DATETIME NOT NULL,
    `temp` INT NOT NULL,
    `hum` INT NOT NULL,
    `dirtHum` INT NOT NULL,
    PRIMARY KEY (`id`)
     ) ENGINE=InnoDB;
+
+   // Modify time col
+    ALTER TABLE  `history`  MODIFY `time` DEFAULT CURRENT_TIMESTAMP
    ```
 
 ### Install the main part
