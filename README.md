@@ -60,7 +60,7 @@
     ) ENGINE=InnoDB;
 
    // Modify time col
-    ALTER TABLE  `history`  MODIFY `time` DEFAULT CURRENT_TIMESTAMP
+    ALTER TABLE  `history`  MODIFY `time` datetime DEFAULT CURRENT_TIMESTAMP
    ```
 
 ### Install the main part
