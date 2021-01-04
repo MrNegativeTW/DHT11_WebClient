@@ -30,17 +30,17 @@
             <div class="row">
 
                 <div class="col-sm formBorder formPadding">
-                    <span class="textLeft mdc-typography-styles-headline6">9999</span><br>
+                    <span class="textLeft mdc-typography-styles-headline6">{{ result[0]['dirtHum'] }}</span><br>
                     <span class="textLeft mdc-typography-styles-body2">土壤濕度</span>
 
                     <hr>
 
-                    <span class="textLeft mdc-typography-styles-headline6">{{ temp }}</span><br>
+                    <span class="textLeft mdc-typography-styles-headline6">{{ result[0]['temp'] }}</span><br>
                     <span class="textLeft mdc-typography-styles-body2">目前溫度</span>
 
                     <hr>
 
-                    <span class="textLeft mdc-typography-styles-headline6">{{ humidity }}</span><br>
+                    <span class="textLeft mdc-typography-styles-headline6">{{ result[0]['hum'] }}</span><br>
                     <span class="textLeft mdc-typography-styles-body2">環境溼度</span>
 
                 </div> <!-- ./col-sm -->
